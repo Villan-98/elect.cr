@@ -1,0 +1,24 @@
+{
+  "name": "elect.cr",
+  "version": "1.0.0",
+  "description": "*in build*",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pg07codes/elect.cr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pg07codes/elect.cr/issues"
+  },
+  "homepage": "https://github.com/pg07codes/elect.cr#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-hbs": "^1.0.4",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.38.0"
+  },
+  "devDependencies": {}
+}
