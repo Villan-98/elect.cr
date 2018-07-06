@@ -4,6 +4,7 @@ const express = require("express")
 const path = require("path")
 const hbs=require('express-hbs')
 const api=require("./routes/api_v1")
+require('./db/models')
 
 const app = express()
 
