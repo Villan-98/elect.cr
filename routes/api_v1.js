@@ -8,6 +8,7 @@ router.get("/createPoll",(r,s)=>{
 
 router.post("/createPoll",(r,s)=>{
     utils.generate(r.body.classid)
+    s.send("submitted")
 })
 
 module.exports=exports=router
