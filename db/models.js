@@ -6,7 +6,7 @@ const Sequelize = require('sequelize')
 //production db setup--not working currently
 //const db=new Sequelize('mysql://testuser:pass@localhost:5432/testdb')
 
-const db=new Sequelize('testdb','testuser','pass',{
+const db=new Sequelize('electdb','testuser','pass',{
    dialect:'mysql'
 })
 
