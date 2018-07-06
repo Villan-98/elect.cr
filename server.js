@@ -19,10 +19,12 @@ app.set("view engine",'hbs')
 app.set("views",'./test-frontend')
 
 //home route
-
 app.get("/", (r, s) => {
     s.render('home.hbs')
 })
+
+//main api for the app
+app.use('/api_v1',api)
 
 //server starts listening
 
