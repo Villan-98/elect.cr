@@ -13,15 +13,15 @@ module.exports={
     checkLimit:(err,requery)=>{
         if(err===null)
         {
-            if(requery.validtime>12||(requery.startingroll>=requery.endingroll ))
+            if(requery.validTime>12||(requery.startingRoll>requery.endingRoll ))
             {
                 return false
             }
-            else if((requery.endingroll-requery.startingroll)<requery.totalcr)
+            else if((requery.endingRoll-requery.startingRoll)<requery.totalCandidates)
             {
                 return false
             }
-            else if(requery.totalcr==='1')
+            else if(requery.totalCandidates<=1)
             {
                 return false
             }

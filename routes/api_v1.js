@@ -17,6 +17,10 @@ router.post("/createPoll",(r,s)=>{
         ctrl.createNewPoll(r.body)
         s.send("doneSubmission")
     }
+    else
+    {
+        s.render('newPollForm')
+    }
 
 })
 
