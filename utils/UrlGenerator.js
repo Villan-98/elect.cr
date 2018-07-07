@@ -9,5 +9,6 @@ module.exports={
         let data=id.split('/')
         let [college,batchCode,branchCode,groupCode]=[data[0],data[1],data[2],data[3]]
         console.log(college+batchCode+branchCode+groupCode)
+        console.log(url)
     },
 }
