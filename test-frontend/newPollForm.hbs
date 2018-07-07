@@ -12,19 +12,41 @@
 <body>
 <form method="post" action="/api_v1/createPoll">
     college name:
-    <select name="collegeShortName">
+    <select name="collegeShortName" required>
         <option value="DTU">DelhiTechUniv (DTU)</option>
     </select><br>
     roll no. range to be allowed to vote<br>
-    <input name="startingRoll" type="number" placeholder="starting rollno.">
-    <input name="endingRoll" type="number" placeholder="ending rollno."><br>
+    <input name="startingRoll" type="number" placeholder="starting rollno." required>
+    <input name="endingRoll" type="number" placeholder="ending rollno." required><br>
     unique class id here
-    <input name="classId" type="text" placeholder="unique class id here"><br>
+    <input name="classId" type="text" placeholder="unique class id here" required><br>
     no of hours form will be open
-    <input name="validTime" type="number" placeholder="how long will form remain valid"><br>
-    # of CR's <input name="totalCandidates" type="number" placeholder="number of CRs"><br>
-    <input type="submit" value="submit">
-</form>
+    <input name="validTime" type="number" placeholder="how long will form remain valid" required><br>
+    # of CR's <input name="totalCandidates" id="totalCandidates" type="number" placeholder="number of CRs" required><br>
+    this button wont be there in final code...
+    <input type="button" value="createFields to enter CR names" id="createField"><br>
+    <div id="crDetails">
 
+    </div>
+
+    <input type="submit" value="submit" id="submit">
+</form>
+<script>
+
+    // this script will not be needed later when using vue as a front end...just made for testing purposes
+    let x=document.getElementById('totalCandidates')
+    let y=document.getElementById('crDetails')
+    let html=""
+    document.getElementById('createField').onclick=function(){
+        y.innerHTML=""
+        for(let i=0;i<x.value;i++){
+            html+="<input type='text' class='crNames' placeholder='enter cr names'>"
+        }
+        y.innerHTML=html
+    }
+
+
+
+</script>
 </body>
 </html>
