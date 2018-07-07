@@ -4,6 +4,7 @@ const express = require("express")
 const path = require("path")
 const hbs=require('express-hbs')
 const api=require("./routes/api_v1")
+const admin=require("./routes/admin")
 require('./db/models')
 
 const app = express()
@@ -25,6 +26,9 @@ app.get("/", (r, s) => {
 
 //main api for the app
 app.use('/api_v1',api)
+
+// this is admin route and will be secured later to not be used by public
+app.use('/admin',admin)
 
 //server starts listening
 
