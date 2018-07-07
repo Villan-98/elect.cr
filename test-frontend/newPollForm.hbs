@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>home</title>
     <style>
-        input{
+        input,select{
             margin:20px;
         }
     </style>
@@ -13,10 +13,8 @@
 <form method="post" action="/api_v1/createPoll">
     college name:
     <select name="collegeShortName">
-        <option value="DTU">DelhiTechUniv</option>
+        <option value="DTU">DelhiTechUniv (DTU)</option>
     </select><br>
-    # of student to vote
-    <input name="toVote" type="number" placeholder="no of students to vote"><br>
     roll no. range to be allowed to vote<br>
     <input name="startingRoll" type="number" placeholder="starting rollno.">
     <input name="endingRoll" type="number" placeholder="ending rollno."><br>
