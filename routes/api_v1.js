@@ -23,7 +23,8 @@ router.post("/createPoll",(r,s)=>{
 router.get("/:url",(r,s)=>{
     let classId=utils.decodeUrl(r.params.url)
     ctrl.getPollDetails(r.params.url,function(data){
-        s.send(data)
+        // s.send(data)
+        s.render("votingPage",{data:data})
     })
 })
 

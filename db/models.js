@@ -5,10 +5,12 @@ const Sequelize = require('sequelize')
 const dt=Sequelize.DataTypes
 
 //production db setup--not working currently
-//const db=new Sequelize('mysql://testuser:pass@localhost:5432/testdb')
+//const db=new Sequelize('mysql://testuser:pass@localhost:5432/electdb')
 
 const db=new Sequelize('electdb','testuser','pass',{
-   dialect:'mysql'
+    dialect:'mysql',
+    timezone:'+05:30'
+
 })
 
 //models to be defined inside here
@@ -26,6 +28,7 @@ college=db.define('college',{
     }
 
 })
+
 pollBooth=db.define("pollBooth",{
     URL:{
         primaryKey:true,
@@ -63,4 +66,4 @@ db.sync({
     console.log("db synced")
 })
 
-module.exports={db,pollBooth}
+module.exports={db,pollBooth,college}
