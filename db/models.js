@@ -28,7 +28,16 @@ college=db.define('college',{
     }
 
 })
-
+candidate=db.define('candidate',{
+    name:{
+        type:dt.STRING,
+        allowNull:false
+    },
+    vote:{
+        type:dt.INTEGER,
+        defaultValue:0
+    }
+})
 pollBooth=db.define("pollBooth",{
     URL:{
         primaryKey:true,
@@ -54,7 +63,7 @@ pollBooth=db.define("pollBooth",{
     }
 
 })
-
+pollBooth.hasMany(candidate)
 college.hasMany(pollBooth)
 pollBooth.belongsTo(college)
 
@@ -66,4 +75,4 @@ db.sync({
     console.log("db synced")
 })
 
-module.exports={db,pollBooth,college}
+module.exports={db,pollBooth,college,candidate}

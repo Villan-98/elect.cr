@@ -40,13 +40,10 @@
     document.getElementById('createField').onclick=function(){
         y.innerHTML=""
         for(let i=0;i<x.value;i++){
-            html+="<input type='text' class='crNames' placeholder='enter cr names'>"
+            html+=`<input type='text' class='crNames' name='crName' placeholder='enter cr names'>`
         }
         y.innerHTML=html
     }
-
-
-
 </script>
 </body>
 </html>

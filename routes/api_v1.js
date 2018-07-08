@@ -2,8 +2,6 @@
 const router=require('express').Router()
 const utils=require('../utils/UrlGenerator')
 const ctrl=require('../controllers/createPoll')
-const pollBooth=require('../db/models').pollBooth
-
 const validator=require('../utils/Validator')
 
 router.get("/createPoll",(r,s)=>{
